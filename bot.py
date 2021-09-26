@@ -43,4 +43,4 @@ async def play(ctx):
     else:
         await ctx.send('Please connect to a voice channel.')
 
-bot.run('ODA2NzYxMzgzMjQ0NTk1MjQw.YBuJFg.VpcRYfjSTAHpJd-5YyHSF5-pSKY')
+bot.run('ODkxNTcxMzQ4NzA5NzA3Nzg2.YVAShg.DCYANW8ObHZMX_jda_CesntMVUI')
