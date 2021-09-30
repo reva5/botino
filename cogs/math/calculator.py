@@ -8,7 +8,7 @@ class Calculator(commands.Cog):
         self.bot = bot
 
     @commands.command()
-    async def math(self, ctx, *, op: str):
+    async def calc(self, ctx, *, op: str):
         result = subprocess.check_output(f'python3 -c "print({op})"; exit 0',
                 shell=True,
                 encoding="UTF-8")

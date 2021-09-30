@@ -38,7 +38,7 @@ class Calendar(commands.Cog):
     
 
     @commands.command()
-    async def caladd(self, ctx, name: str, date_string: str):
+    async def caladd(self, ctx, date_string: str, *, name: str):
         time_left = (datetime.fromisoformat(date_string) - datetime.today()).total_seconds()
         await ctx.send(f"'{name}' has been added to your calendar.")
         try:
@@ -49,15 +49,18 @@ class Calendar(commands.Cog):
             await ctx.send(name)
 
     @commands.command()
-    async def calrm(self, ctx, name: str, date_string: str):
+    async def calrm(self, ctx, date_string: str, *, name: str):
         key = (name, date_string)
         cal_sleep.cancel(key, ctx.author.id)
-        await ctx.send(f"'{name}' has been removed from your calendar")
+        await ctx.send(f"'{name}' has been removed from your calendar.")
 
     @commands.command()
     async def cal(self, ctx):
-        display = '\n'.join(cal_sleep.display(ctx.author.id))
-        await ctx.send(display)
+        try:
+            display = '\n'.join(cal_sleep.display(ctx.author.id))
+            await ctx.send(display)
+        except:
+            await ctx.send("Nothing scheduled.")
 
 def setup(bot):
     bot.add_cog(Calendar(bot))
