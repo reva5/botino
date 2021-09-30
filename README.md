@@ -30,4 +30,3 @@ botino is a free, open-source Discord bot for Discord servers, built on top of [
 ## Installation
 
 You can get the bot to join your server by clicking this [link](https://discord.com/api/oauth2/authorize?client_id=891571348709707786&permissions=8&scope=bot).
-# botino
