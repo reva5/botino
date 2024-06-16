@@ -10,7 +10,7 @@ botino is a free, open-source Discord bot for Discord servers, built on top of [
 - `?calrm [date] [event]` -> Remove an event from your calendar.
 - `?cal` -> Check your calendar for active events.
 ### Poll
-- `?poll [prompt] [secs]` -> Start a poll which lasts a given number of seconds (default is 180 seconds). 
+- `?poll [secs] [prompt]` -> Start a poll which lasts a given number of seconds (default is 180 seconds). 
 ### Timer
 - `?timer [secs]` -> Start a timer.
 - `?canceltimers` -> Cancel all currently active timers.
